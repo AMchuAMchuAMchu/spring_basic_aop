@@ -22,7 +22,7 @@ import java.util.List;
 
 public interface AnimeInfoMapper{
 
-
+    @Select("select * from anime_info")
     List<AnimeInfo> selectAll();
 
 }

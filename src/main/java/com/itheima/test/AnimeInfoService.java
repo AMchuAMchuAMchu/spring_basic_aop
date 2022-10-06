@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.BeanFactoryAnnotationUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import javax.crypto.ExemptionMechanismException;
 import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,6 +52,15 @@ public class AnimeInfoService {
         sqlSession = build.openSession();
 
         mapper = sqlSession.getMapper(AnimeInfoMapper.class);
+
+    }
+
+
+    @Test
+    public void testGetAll02(){
+
+        List<AnimeInfo> animeInfos = mapper.selectAll();
+        animeInfos.forEach(System.out::println);
 
     }
 
