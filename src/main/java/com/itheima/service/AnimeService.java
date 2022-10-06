@@ -51,8 +51,6 @@ public class AnimeService {
     }
 
 
-
-
     @Bean
     public List<AnimeInfo> getAnimeInfoAll(){
 
