@@ -21,8 +21,11 @@ import java.util.List;
 @Component
 @Aspect
 public class AnimeService {
+//
+//    @Pointcut("execution(* com.itheima.*.selectAll(..))")
+//    public void pt01(){}
 
-    @Pointcut("execution(* com.itheima.*.selectAll(..))")
+    @Pointcut("execution(* com.itheima.*.TestGetAnimeInfo(..))")
     public void pt01(){}
 
 
