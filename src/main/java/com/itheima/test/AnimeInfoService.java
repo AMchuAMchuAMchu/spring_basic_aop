@@ -75,9 +75,8 @@ public class AnimeInfoService {
 
         AnimeInfoMapper bean = ac.getBean(AnimeInfoMapper.class);
 
-        List<AnimeInfo> animeInfos = bean.selectAll();
+        bean.selectAll();
 
-        animeInfos.forEach(System.out::println);
 
     }
 
