@@ -1,5 +1,6 @@
 package com.itheima.test;
 
+import com.itheima.config.SpringConfig;
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.invoke.AnimeService;
 import com.itheima.pojo.AnimeInfo;
@@ -9,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,6 +48,21 @@ public class AnimeInfoService {
         sqlSession = build.openSession();
 
         mapper = sqlSession.getMapper(AnimeInfoMapper.class);
+
+    }
+
+
+    @Test
+    public void testSelectAnime(){
+
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+        AnimeInfoMapper bean = ac.getBean(AnimeInfoMapper.class);
+
+        List<AnimeInfo> animeInfos = bean.selectAll();
+
+        animeInfos.forEach(System.out::println);
+
 
     }
 
