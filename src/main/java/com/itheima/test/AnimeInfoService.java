@@ -1,12 +1,14 @@
 package com.itheima.test;
 
 import com.itheima.dao.AnimeInfoMapper;
+import com.itheima.invoke.AnimeService;
 import com.itheima.pojo.AnimeInfo;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,10 +51,13 @@ public class AnimeInfoService {
 
 
 
+
     @Test
     public void testSelectAnimeAllResumeTime(){
 
+        List<AnimeInfo> animeInfos = mapper.selectAll();
 
+        animeInfos.forEach(System.out::println);
 
     }
 
