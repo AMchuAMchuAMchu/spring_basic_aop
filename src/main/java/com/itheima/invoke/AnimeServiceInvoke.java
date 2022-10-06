@@ -6,7 +6,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -20,9 +19,9 @@ import java.util.List;
  */
 @Component
 @Aspect
-public class AnimeService {
+public class AnimeServiceInvoke {
 
-    @Pointcut("execution(* com.itheima.*.AnimeInfoMapper.selectAll(..))")
+    @Pointcut("execution(* com.itheima.*.AnimeService.getAnimeInfoAll(..))")
     public void pt01(){}
 //
 //    @Pointcut("execution(* com.itheima.*.TestGetAnimeInfo.getAnimeInfo(..))")
