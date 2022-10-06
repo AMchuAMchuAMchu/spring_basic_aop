@@ -5,22 +5,22 @@
 <configuration>
     
     <typeAliases>
-        <package name="com.itheima.pojo.AnimeInfo"/>
+        <package name="com.itheima.pojo"/>
     </typeAliases>
     
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="${com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="${jdbc:mysql://localhost:3306/anime_test01}"/>
-                <property name="username" value="${root}"/>
-                <property name="password" value="${root}"/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/anime_test01"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <package name="com.itheima"/>
+        <package name="com.itheima.dao"/>
     </mappers>
 </configuration>
 

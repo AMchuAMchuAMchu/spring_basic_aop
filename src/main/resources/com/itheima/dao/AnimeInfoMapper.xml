@@ -6,7 +6,7 @@
     <resultMap id="anime" type="com.itheima.pojo.AnimeInfo">
         <result column="release_time" property="releaseTime"></result>
     </resultMap>
-    <select id="selectAll" resultMap="anime">
-        select * from anime_info
-    </select>
+<!--    <select id="selectAll" resultMap="anime">-->
+<!--        select * from anime_info-->
+<!--    </select>-->
 </mapper>

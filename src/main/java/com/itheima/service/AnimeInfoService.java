@@ -52,6 +52,14 @@ public class AnimeInfoService {
 
 
     @Test
+    public void testAnime(){
+
+
+
+    }
+
+
+    @Test
     public void testAnimeAll(){
 
         List<AnimeInfo> animeInfos = mapper.selectAll();
