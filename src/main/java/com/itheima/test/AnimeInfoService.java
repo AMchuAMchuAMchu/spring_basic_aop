@@ -54,11 +54,13 @@ public class AnimeInfoService {
     }
 
 
-    @Autowired
-    private AnimeService animeService;
 
     @Test
     public void testServiceTime(){
+
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+        AnimeService animeService = ac.getBean(AnimeService.class);
 
         List<AnimeInfo> animeInfoAll = animeService.getAnimeInfoAll();
 
