@@ -2,10 +2,16 @@ package com.itheima.service;
 
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.pojo.AnimeInfo;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -19,19 +25,42 @@ import java.util.List;
 public class AnimeInfoService {
 
 
+    private static InputStream ras;
 
-    @Autowired
-    private AnimeInfoMapper animeInfoMapper;
+    private static SqlSessionFactory build;
+
+    private static SqlSession sqlSession;
+
+    private static AnimeInfoMapper mapper;
+
+    static {
+
+        try {
+            ras = Resources.getResourceAsStream("mybatis-config.xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        build = new SqlSessionFactoryBuilder().build(ras);
+
+        sqlSession = build.openSession();
+
+        mapper = sqlSession.getMapper(AnimeInfoMapper.class);
+
+    }
+
+
 
     @Test
     public void testAnimeAll(){
 
-        List<AnimeInfo> animeInfos = animeInfoMapper.selectAll();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        animeInfos.forEach(System.out::println);
+        List<AnimeInfo> animeInfos = mapper.selectAll();
 
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        animeInfos.forEach(System.out::println);
 
     }
 
