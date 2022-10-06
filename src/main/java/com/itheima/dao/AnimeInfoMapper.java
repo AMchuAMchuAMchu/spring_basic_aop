@@ -1,5 +1,6 @@
 package com.itheima.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.itheima.pojo.AnimeInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -17,10 +18,9 @@ import java.util.List;
  * CreateTime ==> 2022-10-06 13:24:00
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
-@Component
-public interface AnimeInfoMapper {
+@Mapper
+public interface AnimeInfoMapper extends BaseMapper<AnimeInfo> {
 
-    @Bean
     @Select("select * from anime_info")
     List<AnimeInfo> selectAll();
 

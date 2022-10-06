@@ -21,12 +21,12 @@ import java.util.List;
 @Component
 @Aspect
 public class AnimeService {
-//
-//    @Pointcut("execution(* com.itheima.*.selectAll(..))")
-//    public void pt01(){}
 
-    @Pointcut("execution(* com.itheima.*.TestGetAnimeInfo(..))")
+    @Pointcut("execution(* com.itheima.*.AnimeInfoMapper.selectAll(..))")
     public void pt01(){}
+//
+//    @Pointcut("execution(* com.itheima.*.TestGetAnimeInfo.getAnimeInfo(..))")
+//    public void pt01(){}
 
 
     @Around("pt01()")
@@ -41,7 +41,7 @@ public class AnimeService {
 
         long end = System.currentTimeMillis();
 
-        System.out.println("耗时:"+(end-start)+"毫米...");
+        System.out.println("耗时:"+(end-start)+"毫秒...");
         return proceed;
     }
 

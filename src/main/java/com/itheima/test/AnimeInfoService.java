@@ -77,8 +77,9 @@ public class AnimeInfoService {
 
         List<AnimeInfo> animeInfos = bean.selectAll();
 
-        animeInfos.forEach(System.out::println);
+        List<AnimeInfo> animeInfos1 = bean.selectList(null);
 
+        animeInfos.forEach(System.out::println);
 
     }
 
