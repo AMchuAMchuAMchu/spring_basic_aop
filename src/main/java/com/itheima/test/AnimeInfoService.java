@@ -1,4 +1,4 @@
-package com.itheima.service;
+package com.itheima.test;
 
 import com.itheima.dao.AnimeInfoMapper;
 import com.itheima.pojo.AnimeInfo;
@@ -7,8 +7,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -52,7 +50,7 @@ public class AnimeInfoService {
 
 
     @Test
-    public void testAnime(){
+    public void testSelectAnimeAllResumeTime(){
 
 
 
