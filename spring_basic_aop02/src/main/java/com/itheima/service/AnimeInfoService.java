@@ -25,10 +25,7 @@ import java.util.List;
 public class AnimeInfoService {
 
 
-
-
     public List<AnimeInfo> getAnimeAll() throws IOException {
-
 
         InputStream ras = Resources.getResourceAsStream("mybatis-config.xml");
 
@@ -40,6 +37,8 @@ public class AnimeInfoService {
 
         List<AnimeInfo> animeInfos = mapper.selectAll();
 
+        System.out.println("我执行了N多的业务的说....^_^");
+        System.out.println("我执行了N多的业务的说....^_^");
         System.out.println("我执行了N多的业务的说....^_^");
 
         return animeInfos;
