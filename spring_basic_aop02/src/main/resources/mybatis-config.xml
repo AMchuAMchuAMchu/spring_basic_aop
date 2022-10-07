@@ -5,7 +5,7 @@
 <configuration>
 
     <typeAliases>
-        <package name="com.itheima.pojo.AnimeInfo"/>
+        <package name="com.itheima"/>
     </typeAliases>
 
     <environments default="development">

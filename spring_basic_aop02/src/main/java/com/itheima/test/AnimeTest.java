@@ -29,6 +29,10 @@ public class AnimeTest {
 
         List<AnimeInfo> animeAll = bean.getAnimeAll();
 
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
         animeAll.forEach(System.out::println);
 
     }
