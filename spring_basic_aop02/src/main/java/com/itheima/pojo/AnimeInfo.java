@@ -1,6 +1,8 @@
 package com.itheima.pojo;
 
 import lombok.Data;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 /**
  * Description ==> TODO

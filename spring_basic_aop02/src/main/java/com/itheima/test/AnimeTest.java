@@ -18,17 +18,15 @@ import java.util.List;
  */
 public class AnimeTest {
 
-
     @Autowired
     private AnimeInfoService animeInfoService;
 
     @Test
     public void testAnimeAll() throws IOException {
 
-        List<AnimeInfo> animeAll = animeInfoService.getAnimeAll();
+//        List<AnimeInfo> animeAll = animeInfoService.getAnimeAll();
 
-        animeAll.forEach(System.out::println);
-
+//        animeAll.forEach(System.out::println);
 
     }
 

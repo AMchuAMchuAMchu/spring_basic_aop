@@ -6,6 +6,8 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Test;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +27,9 @@ import java.util.List;
 public class AnimeInfoService {
 
 
-    public List<AnimeInfo> getAnimeAll() throws IOException {
+    @Bean
+    @Test
+    public void getAnimeAll() throws IOException {
 
         InputStream ras = Resources.getResourceAsStream("mybatis-config.xml");
 
@@ -41,7 +45,7 @@ public class AnimeInfoService {
         System.out.println("我执行了N多的业务的说....^_^");
         System.out.println("我执行了N多的业务的说....^_^");
 
-        return animeInfos;
+//        return animeInfos;
 
 
     }
