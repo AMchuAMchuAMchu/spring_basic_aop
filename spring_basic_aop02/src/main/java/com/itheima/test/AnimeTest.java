@@ -24,9 +24,9 @@ public class AnimeTest {
     @Test
     public void testAnimeAll() throws IOException {
 
-//        List<AnimeInfo> animeAll = animeInfoService.getAnimeAll();
+        List<AnimeInfo> animeAll = animeInfoService.getAnimeAll();
 
-//        animeAll.forEach(System.out::println);
+        animeAll.forEach(System.out::println);
 
     }
 
