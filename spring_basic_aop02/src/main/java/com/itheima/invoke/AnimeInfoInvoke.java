@@ -30,7 +30,7 @@ public class AnimeInfoInvoke {
         long start = System.currentTimeMillis();
         List<AnimeInfo> proceed = null;
         int count = 0;
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100; i++) {
             count++;
             proceed = (List<AnimeInfo>) pjp.proceed();
             System.out.println("第"+count+"次");
