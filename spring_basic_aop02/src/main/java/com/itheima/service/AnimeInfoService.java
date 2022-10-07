@@ -40,9 +40,9 @@ public class AnimeInfoService {
 
         List<AnimeInfo> animeInfos = mapper.selectAll();
 
-//        System.out.println("我执行了N多的业务的说....^_^");
-//        System.out.println("我执行了N多的业务的说....^_^");
-//        System.out.println("我执行了N多的业务的说....^_^");
+        System.out.println("我执行了N多的业务的说....^_^");
+        System.out.println("我执行了N多的业务的说....^_^");
+        System.out.println("我执行了N多的业务的说....^_^");
 
         return animeInfos;
 
