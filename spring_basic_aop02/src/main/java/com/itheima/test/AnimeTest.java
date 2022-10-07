@@ -1,9 +1,11 @@
 package com.itheima.test;
 
+import com.itheima.config.SpringConfig;
 import com.itheima.pojo.AnimeInfo;
 import com.itheima.service.AnimeInfoService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;
 import java.util.List;
@@ -18,13 +20,14 @@ import java.util.List;
  */
 public class AnimeTest {
 
-    @Autowired
-    private AnimeInfoService animeInfoService;
-
     @Test
     public void testAnimeAll() throws IOException {
 
-        List<AnimeInfo> animeAll = animeInfoService.getAnimeAll();
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+
+        AnimeInfoService bean = ac.getBean(AnimeInfoService.class);
+
+        List<AnimeInfo> animeAll = bean.getAnimeAll();
 
         animeAll.forEach(System.out::println);
 
